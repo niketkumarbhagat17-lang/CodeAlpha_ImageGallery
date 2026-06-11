@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Image Gallery</title>
+    <title>My Image Gallery | CodeAlpha</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h1>My Photo Gallery</h1>
+        <h1>📸 My Photo Gallery</h1>
 
         <!-- Category buttons -->
         <div class="categories">
             <button class="cat-btn active" data-category="all">All</button>
-            <button class="cat-btn" data-category="nature">Nature</button>
-            <button class="cat-btn" data-category="city">City</button>
-            <button class="cat-btn" data-category="animals">Animals</button>
+            <button class="cat-btn" data-category="nature">🌿 Nature</button>
+            <button class="cat-btn" data-category="city">🏙️ City</button>
+            <button class="cat-btn" data-category="animals">🐾 Animals</button>
         </div>
 
         <!-- Filter options -->
         <div class="filter-controls">
-            <span>Filters: </span>
+            <span>🎨 Filters: </span>
             <button class="filter-btn" data-filter="none">Normal</button>
-            <button class="filter-btn" data-filter="bw">B&W</button>
+            <button class="filter-btn" data-filter="bw">B&amp;W</button>
             <button class="filter-btn" data-filter="sepia">Sepia</button>
             <button class="filter-btn" data-filter="blur">Blur</button>
         </div>
@@ -34,12 +34,26 @@
         <div class="gallery-grid" id="galleryGrid"></div>
     </div>
 
-    <!-- Lightbox popup -->
+    <!-- Lightbox popup  -->
     <div id="lightbox" class="lightbox">
         <span class="close">×</span>
         <span class="nav-prev">‹</span>
-        <img class="lightbox-img" id="lightboxImg">
+        <img class="lightbox-img" id="lightboxImg" alt="Enlarged view">
         <span class="nav-next">›</span>
+
+        <!-- NEW FEATURES: Control buttons -->
+        <div class="lightbox-controls">
+            <button class="ctrl-btn" id="downloadBtn">📥 Download</button>
+            <button class="ctrl-btn" id="slideshowBtn">▶ Slideshow</button>
+            <button class="ctrl-btn" id="fullscreenBtn">⛶ Fullscreen</button>
+            <button class="ctrl-btn" id="zoomInBtn">🔍 Zoom In</button>
+            <button class="ctrl-btn" id="zoomOutBtn">🔍 Zoom Out</button>
+        </div>
+
+        <!--Image counter -->
+        <div class="image-counter">
+            <span id="currentImgNum">1</span> / <span id="totalImgNum">12</span>
+        </div>
     </div>
 
     <script src="script.js"></script>
